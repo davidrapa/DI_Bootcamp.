@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html { 
+    background: url(map.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .shop {
+    color: black;
+    display: flex;
+font-size: 50px;
+font-family: 'Courier New', Courier, monospace;;
+  }
+
+.center { 
+    height : 400px;
+    border: 1px solid rgb(0, 0, 0);
+    display:flex; 
+    /* display:flex on the parent container */
+    flex-direction: row;
+    /* flex-direction: row DEFAULT - therefore the main axis is x (x axis)*/
+    justify-content:space-around;
+    align-items: flex-start;
+  /*   align items in the container along the cross axis (y axis). 
+    DEFAULT STRECH */
+    flex-wrap:wrap;
+    align-content: space-between;
+}
+.cuadros {
+    border: 1px solid rgb(0, 0, 0);
+    display:flex; 
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: flex-end;
+  /*   align items in the container along the cross axis (y axis). 
+    DEFAULT STRECH */
+    flex-wrap:wrap;
+    align-content: space-between;
+
+}
+.div1 {
+    border: 1px solid blue;
+    background-color: #e6ffff;
+    width: 30%;
+    flex-direction: column;
+  }
+  
+  .div2 {
+    border: 1px solid red;
+    background-color: #ffd6cc;
+    width: 30%;
+ 
+  }
+
+  .div3 {
+    border: 1px solid red;
+    background-color: #ffd6cc;
+    width: 30%;
+
+  }

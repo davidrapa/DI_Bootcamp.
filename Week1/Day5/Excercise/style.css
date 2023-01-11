@@ -1,0 +1,83 @@
+* {
+    margin: 0 auto;
+}
+
+nav {
+    position: relative;
+    background-color: black;
+    height: 40px;
+}
+
+.our {
+    position: absolute;
+    font-size: 16px;
+    right: 0px;
+    width: 100px;
+    padding: 10px;
+ color: white;
+ cursor: pointer;
+}
+
+.our:hover {
+    background-color: #cfd8cf;
+}
+
+.crown {
+    color: white;
+    position: absolute;
+    right: 0px;
+    width: 800px;
+    padding: 10px;
+ color: white;
+}
+
+
+
+img {
+width: 200px;
+height: 300px;
+border: 1px solid red;
+
+}
+
+.divpic {
+    display: flex;
+    border: 1px solid green;
+    }
+
+    .price {
+      position: relative;
+
+    }
+h2 {
+
+    text-align: center;
+}
+h3 {
+    position: absolute;
+    right: 115px;
+    text-align: center;
+}
+h4 {
+    position: absolute;
+    right: 75px;
+    text-decoration:line-through
+}
+
+.button {
+    background-color: white;
+    border: 2px solid #e7e7e7;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color: black;
+
+  }
+
+  .button:hover {background-color: #12c812;}
