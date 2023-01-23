@@ -142,7 +142,7 @@ var family = {
     child2: "Rosa"
   };
 
-for (let i of family) {
+for (let i in family) {
     console.log(i)
 }
 

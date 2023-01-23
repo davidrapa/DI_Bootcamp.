@@ -1,17 +1,15 @@
-let i = 0;
-while (i <= 1) {
-  console.log("*");
-  i++;
-  while (i <= 2) {
-    console.log("**");
-    i++;
-  }
-  while (i <= 3) {
-    console.log("***");
-    i++;
-  }
-  while (i <= 4) {
-    console.log("****");
-    i++;
-  }
+
+for (let i = 1; i < 7; i++){
+    let star='';
+    star += '*';
+    console.log(star.repeat(i));
+
 }
+let star='*';
+for (let i = 1; i < 7; i++){
+    let star='';
+    for (let  = 0; j < 7 ; j++){
+        star += '*';
+    }
+        console.log(star);
+        }
