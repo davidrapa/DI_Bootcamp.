@@ -74,7 +74,20 @@ document.querySelector(`.listPlanets`).appendChild(pluto)
 
 let venusMoon = document.createElement("div")
 let textVenusMoon = document.createTextNode("Moon Venus")
-textVenusMoon.appendChild(textVenusMoon)
+venusMoon.appendChild(textVenusMoon)
 venusMoon.classList.add("moon")
-let vMoon = document.getElementyById("venus");
+let vMoon = document.querySelector(`#venus`);
+venusMoon.style.backgroundColor = `#dcdcdc`
+venusMoon.style.width = "30px";
+venusMoon.style.height = "30px";
+vMoon.appendChild(venusMoon);
+
+let venusMoon = document.createElement("div")
+let textVenusMoon = document.createTextNode("Moon Venus")
+venusMoon.appendChild(textVenusMoon)
+venusMoon.classList.add("moon")
+let vMoon = document.querySelector(`#venus`);
+venusMoon.style.backgroundColor = `#dcdcdc`
+venusMoon.style.width = "30px";
+venusMoon.style.height = "30px";
 vMoon.appendChild(venusMoon);
