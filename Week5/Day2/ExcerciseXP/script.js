@@ -74,16 +74,16 @@
 
 
 // function getTags() { 
-// let li = document.createElement(`li`);
-// li.appendChild(document.createTextNode(inputName.value))
-// li.appendChild(document.createTextNode(inputLastName.value))
-// ul.appendChild(li)
-// } 
+// // let li = document.createElement(`li`);
+// // li.appendChild(document.createTextNode(inputName.value))
+// // li.appendChild(document.createTextNode(inputLastName.value))
+// // ul.appendChild(li)
+// // } 
 
-// 🌟 Exercise 3 : Transform The Sentence
-// In the JS file:
+// // 🌟 Exercise 3 : Transform The Sentence
+// // In the JS file:
 
-// Declare a global variable named allBoldItems.
+// // Declare a global variable named allBoldItems.
 
 // Create a function called getBold_items() that takes no parameter. This function should collect all the bold items inside the paragraph and assign them to the allBoldItems variable.
 
@@ -97,18 +97,19 @@
 // <strong>end</strong> you <strong>will</strong> be great Developers!
 // // <strong>Enjoy</strong> the <strong>JavaScript </strong> lessons</p>
 
-// let allBoldItems = document.querySelectorAll(`strong`)
+let allBoldItems = document.querySelectorAll(`strong`)
+console.log(allBoldItems[0]);
 
-// function getBold_items() {
-// document.querySelectorAll(`strong`)
-// }
-// function highlight() {
-//     document.querySelectorAll(`strong`).style.color = "blue"
-// }
+function getBold_items() {
+document.querySelectorAll(`strong`)
+}
+function highlight() {
+    document.querySelectorAll(`strong`).style.color = "blue"
+}
 
-// function return_normal() {
-//     document.querySelectorAll(`strong`).style = null
-// }
+function return_normal() {
+    document.querySelectorAll(`strong`).style = null
+}
 
 // allBoldItems.addEventListener("mouseover", highlight);
 // allBoldItems.addEventListener("mouseout", return_normal);
