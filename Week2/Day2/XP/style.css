@@ -44,14 +44,14 @@ font-family: 'Courier New', Courier, monospace;;
     align-content: space-between;
 
 }
-.div1 {
+.chancho {
     border: 1px solid blue;
     background-color: #e6ffff;
     width: 30%;
     flex-direction: column;
   }
   
-  .div2 {
+  .jaulac {
     border: 1px solid red;
     background-color: #ffd6cc;
     width: 30%;
