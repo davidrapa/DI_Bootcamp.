@@ -1,0 +1,14 @@
+# Challenge 2
+# Write a program that asks a string to the user, and display a new string with any duplicate consecutive letters removed.
+rep_word = input('give me a word with consecutive letters')
+new_word = []
+for i in range(0,len(rep_word)):
+    if len(new_word) == 0:
+        new_word.append(rep_word[i])
+    if rep_word[i] in new_word and rep_word[i] == new_word[-1]:
+        continue
+    else:
+        new_word.append(rep_word[i])
+
+new_word = ''.join(new_word)
+print(new_word)
