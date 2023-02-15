@@ -1,0 +1,14 @@
+def divide_by_zero():
+    try:
+        result = 5/0
+    except ZeroDivisionError:
+        print("Error: división por cero")
+    except Exception as e:
+        print(f"Error: {str(e)}")
+    else:
+        print(f"El resultado es {result}")
+    finally:
+        print("Operación de división completa")
+
+if __name__ == '__main__':
+    divide_by_zero()
