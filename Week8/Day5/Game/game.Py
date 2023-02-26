@@ -6,7 +6,7 @@ class Game:
             user_item = input("Select rock, paper or scissors: ")
             if user_item.lower() in ("rock", "paper", "scissors"):
                 return user_item.lower()
-            else:
+            else: https://github.com/camveff/DI-Bootcamp-Stage1/tree/main/week+8/day+3
                 print("Invalid input. Please select rock, paper or scissors!.")
 
     def get_computer_item(self):
@@ -16,9 +16,9 @@ class Game:
     def get_game_result(self, user_item, computer_item):
         if user_item == computer_item:
             return "draw"
-        elif (user_item == "rock" and computer_item == "scissors") or (user_item == "paper" and computer_item == "rock") or (user_item == "scissors" and computer_item == "paper"):
+        elif (user_item == "rock" and computer_item == "scissors") or (user_item == "paper" and computer_item == "rock") or (user_item == "scissors" and computer_item == "paper"): # there is no need for the elif, please change it with if because we are doing return line before
             return "win"
-        else:
+        else: # it's redundant, please remove
             return "loss"
 
     def play(self):
