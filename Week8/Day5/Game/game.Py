@@ -7,7 +7,7 @@ class Game:
             if user_item.lower() in ("rock", "paper", "scissors"):
                 return user_item.lower()
             else:
-                print("Invalid input. Please select rock, paper or scissors.")
+                print("Invalid input. Please select rock, paper or scissors!.")
 
     def get_computer_item(self):
         items = ["rock", "paper", "scissors"]
