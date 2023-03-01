@@ -1,42 +1,35 @@
-class Human:
-    def __init__(self, name, age, living_place=None):
+# Instructions :
+# Create a Person class which will have three properties:
+# Name
+# List of foods they like
+# List of foods they hate
+# Note: A person can have an empty list for foods they hate and/or love.
+#
+# In this class, create the method taste():
+# It will take in a food name as a string.
+# Return {person_name} eats the {food_name}.
+# If the food is in the person’s like list, add ‘and loves it!’ to the end.
+# If it is in the person’s hate list, add ‘and hates it!’ to the end.
+# If it is in neither list, simply add an exclamation mark to the end.
+
+class Person:
+    def __init__(self, name, likes, hates):
         self.name = name
-        self.age = age
-        self.living_place = living_place
+        self.likes = likes
+        self.hates = hates
 
-    def move(self, building):
-        self.living_place = building
-        building.inhabitants.append(self)
-
-
-class Building:
-    def __init__(self, address, inhabitants=[]):
-        self.address = address
-        self.inhabitants = inhabitants
+    def taste(self, food):
+        if food in self.likes:
+            return f"{self.name} eats the {food} and loves it!"
+        elif food in self.hates:
+            return f"{self.name} eats the {food} and hates it!"
+        else:
+            return f"{self.name} eats the {food}!"
 
 
-class City:
-    def __init__(self, name, buildings=[]):
-        self.name = name
-        self.buildings = buildings
+p1 = Person("Mario", ["Asado"], ["Empanadas"])
 
-    def construct(self, address):
-        new_building = Building(address)
-        self.buildings.append(new_building)
 
-    def info(self):
-        num_buildings = len(self.buildings)
-        total_age = 0
-        for building in self.buildings:
-            for inhabitant in building.inhabitants:
-                total_age += inhabitant.age
-        mean_age = total_age / len(self.get_all_inhabitants())
-        print(f"The city of {self.name} has {num_buildings} buildings and a mean age of {mean_age:.1f} years.")
-
-    def get_all_inhabitants(self):
-        all_inhabitants = []
-        for building in self.buildings:
-            all_inhabitants.extend(building.inhabitants)
-        return all_inhabitants
-
+print(p1.taste("Asado"))
+print(p1.taste("Empanadas"))  
 
