@@ -39,4 +39,26 @@ class City:
             all_inhabitants.extend(building.inhabitants)
         return all_inhabitants
 
+# create a human and a building
+b1 = Building("123 Main St.")
+h1 = Human("Alice", 25)
+
+# move the human into the building
+h1.move(b1)
+
+# create a city and construct a new building
+c1 = City("New York")
+c1.construct("456 Broadway")
+
+# get all the inhabitants of the city
+all_inhabitants = c1.get_all_inhabitants()
+
+# create some more humans and move them into the buildings
+h2 = Human("Bob", 30)
+h2.move(b1)
+h3 = Human("Charlie", 35)
+h3.move(c1.buildings[0])
+
+# display the city info
+c1.info()
 
