@@ -21,7 +21,7 @@ class Person:
     def taste(self, food):
         if food in self.likes:
             return f"{self.name} eats the {food} and loves it!"
-        elif food in self.hates:
+        elif food in self.hates: # there is no need for the elif here, olease change it with if
             return f"{self.name} eats the {food} and hates it!"
         else:
             return f"{self.name} eats the {food}!"
