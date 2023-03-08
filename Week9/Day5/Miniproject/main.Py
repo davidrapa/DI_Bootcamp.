@@ -173,7 +173,7 @@ jfk.info(datetime.date(2023, 3, 6), datetime.date(2023, 3, 10))
 cdg.info(datetime.date(2023, 3, 6), datetime.date(2023, 3, 10))
 
 # land
-cdg.scheduled_arrivals[0].land()
+# cdg.scheduled_arrivals[0].land()
 
 # display scheduled flights again
 jfk.info(datetime.date(2023, 3, 6), datetime.date(2023, 3, 10))
