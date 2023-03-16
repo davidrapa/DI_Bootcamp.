@@ -7,7 +7,7 @@ def render_exercises():
     with open('lesson1/exercises.md', 'r') as f:
         markdown_text = f.read()
     html = markdown.markdown(markdown_text)
-    return render_template('markdown.html', html=html)
+    return render_template('markdown.html', html=html) # I'm not sure that this soultion is working because as I can see the maekdown.html it's not under the folder templates. in order to user the render_template, you template should be under the tempated folder by default
 
 @app.route('/lesson')
 def render_lesson():
