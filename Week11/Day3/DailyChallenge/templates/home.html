@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color List</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            {% for color in colors %}
+            <li><a href="{{ url_for('show_color', color=color) }}">{{ color }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</body>
+</html>
