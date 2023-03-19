@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Your Cart
+{% endblock %}
+
+{% block content %}
+    <h1>Your Cart</h1>
+    <div class="cart-items">
+        {% if cart_item %}
+            {% for item in cart_item %}
+                <div class="cart-item">
+                    <img src="{{ url_for('static', filename='img/' + item['image']) }}" alt="{{ item['name'] }}">
+                    <div class="item-details">
+                        <h4>{{ item['name'] }}</h4>
+                        <p>Price: ${{ item['price'] }}</p>
+                        <form action="{{ url_for('delete_product_from_cart', product_id=item['id']) }}" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="total">
+                <h3>Total: ${{ total_price }}</h3>
+            </div>
+        {% else %}
+            <p>Your cart is empty!</p>
+        {% endif %}
+    </div>
+{% endblock %}

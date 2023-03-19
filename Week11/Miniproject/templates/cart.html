@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Your Cart:</h1>
+  {% if not cart_item %}
+    <p>Your cart is empty.</p>
+  {% else %}
+    <ul>
+      {% for item in cart_item %}
+        <li>{{ item.name }} - ${{ item.price }}
+          <form action="/delete_product_from_cart/{{ item.id }}" method="POST">
+            <button type="submit">Remove</button>
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+    <p>Total: ${{ total }}</p>
+  {% endif %}
+{% endblock %}

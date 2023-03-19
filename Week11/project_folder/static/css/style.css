@@ -1,0 +1,165 @@
+/* Base styles */
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 10px;
+}
+
+header h1 {
+margin: 0;
+}
+
+nav {
+display: flex;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+nav li {
+margin: 0 10px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+.container {
+max-width: 1000px;
+margin: 0 auto;
+padding: 20px;
+}
+
+/* Index page styles */
+
+.product-list {
+display: flex;
+flex-wrap: wrap;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.product {
+background-color: #fff;
+border: 1px solid #ccc;
+margin: 10px;
+padding: 10px;
+width: calc(33.33% - 20px);
+}
+
+.product img {
+max-width: 100%;
+}
+
+.product h2 {
+margin-top: 0;
+}
+
+.product p {
+margin: 10px 0;
+}
+
+.product form {
+display: inline-block;
+}
+
+.product form button {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 3px;
+color: #333;
+cursor: pointer;
+font-size: 14px;
+padding: 5px 10px;
+}
+
+.product form button:hover {
+background-color: #f0f0f0;
+}
+
+/* Cart page styles */
+
+.cart-items {
+display: flex;
+flex-wrap: wrap;
+list-style: none;
+padding: 0;
+}
+
+.cart-item {
+background-color: #fff;
+border: 1px solid #ccc;
+margin: 10px;
+padding: 10px;
+width: calc(25% - 20px);
+}
+
+.cart-item img {
+max-width: 100%;
+}
+
+.cart-item h3 {
+margin-top: 0;
+}
+
+.cart-item p {
+margin: 10px 0;
+}
+
+.cart-item form {
+display: inline-block;
+}
+
+.cart-item form button {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 3px;
+color: #333;
+cursor: pointer;
+font-size: 14px;
+padding: 5px 10px;
+}
+
+.cart-item form button:hover {
+background-color: #f0f0f0;
+}
+
+.total-price {
+font-size: 24px;
+margin-top: 20px;
+text-align: right;
+}
+
+.delete-button {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 3px;
+color: #333;
+cursor: pointer;
+font-size: 14px;
+margin-left: 10px;
+padding: 5px 10px;
+}
+
+.delete-button:hover {
+background-color: #f0f0f0;
+}

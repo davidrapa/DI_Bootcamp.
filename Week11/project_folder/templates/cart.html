@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Cart{% endblock %}
+
+{% block content %}
+    <h2>Your Cart</h2>
+    {% if cart_items %}
+        <ul class="cart-items">
+            {% for item in cart_items %}
+                <li class="cart-item">
+                    <img src="{{ url_for('static', filename=item['ProductPicUrl']) }}" alt="{{ item['Name'] }}">
+                    <h3>{{ item['Name'] }}</h3>
+                    <p>Price: {{ item['Price'] }} {{ item['CurrencyCode'] }}</p>
+                    <form action="{{ url_for('delete_product_from_cart', product_id=item['ProductId']) }}" method="POST">
+                        <input type="submit" value="Remove from cart">
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <p>Total Price: {{ total_price }} {{ cart_items[0]['CurrencyCode'] }}</p>
+        <form action="{{ url_for('checkout') }}" method="POST">
+            <input type="submit" value="Checkout">
+        </form>
+    {% else %}
+        <p>Your cart is empty</p>
+    {% endif %}
+{% endblock %}
