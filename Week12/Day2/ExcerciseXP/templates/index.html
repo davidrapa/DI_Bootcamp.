@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Cities Around the World{% endblock %}
+
+{% block content %}
+  <h1>Cities Around the World</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Inhabitants</th>
+        <th>Area (sq km)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for city in cities %}
+        <tr>
+          <td>{{ city.name }}</td>
+          <td>{{ city.country }}</td>
+          <td>{{ city.inhabitants }}</td>
+          <td>{{ city.area }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
