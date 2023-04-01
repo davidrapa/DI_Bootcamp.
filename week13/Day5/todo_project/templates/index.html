@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, red, red);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <form action="{{ url_for('index') }}" method="POST">
+        {{ form.csrf_token }}
+        {{ form.task.label }}: {{ form.task }}
+        <input type="submit" value="Add">
+    </form>
+    {% for task in tasks %}
+        <div{% if task.completed %} style="color: red;"{% endif %}>
+            {{ task.details }}
+            <form action="{{ url_for('complete_task', todo_id=task.id) }}" method="POST" style="display: inline;">
+                <input type="submit" value="CHECK">
+            </form>
+        </div>
+    {% endfor %}
+</body>
+</html>
