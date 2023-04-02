@@ -1,3 +1,4 @@
+# why you ahve views and routes?
 from todo_app.extensions import db
 from todo_app.models import Todo
 from todo_app.forms import AddTodoForm
