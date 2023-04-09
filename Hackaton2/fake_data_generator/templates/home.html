@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Data Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Fake Data Generator</h1>
+    <form action="/generate_data" method="POST">
+        <label for="data_type">Select data type:</label>
+        <select id="data_type" name="data_type">
+            <option value="name">Name</option>
+            <option value="address">Address</option>
+            <option value="phone">Phone number</option>
+            <option value="email">Email address</option>
+        </select>
+        <br>
+        <label for="num_records">Number of records:</label>
+        <input type="number" id="num_records" name="num_records" value="10" min="1" max="100">
+        <br>
+        <input type="submit" value="Generate">
+    </form>
+</body>
+</html>
