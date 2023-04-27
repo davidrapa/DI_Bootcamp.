@@ -1,6 +1,4 @@
-import os
-
 class Config:
-    SECRET_KEY = os.environ.get('1234') or 'you-will-never-guess'
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///site.db'
+    SECRET_KEY = '1234'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost/film'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
